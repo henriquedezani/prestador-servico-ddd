@@ -37,6 +37,6 @@ namespace PrestadorServico.Domain.Entities
       Descricao = descricao;
     }
 
-    public List<Proposta> Propostas { get; set; }
+    // public List<Proposta> Propostas { get; set; }
   }
 }
