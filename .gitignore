@@ -1,7 +1,7 @@
 PrestadorServico.Api/bin
 PrestadorServico.Api/obj
-PrestadorServico.Api/appsettings.Development.json
-PrestadorServico.Api/appsettings.json
+# PrestadorServico.Api/appsettings.Development.json
+# PrestadorServico.Api/appsettings.json
 
 PrestadorServico.Domain/bin
 PrestadorServico.Domain/obj

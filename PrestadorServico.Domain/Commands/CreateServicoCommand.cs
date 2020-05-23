@@ -6,6 +6,8 @@ namespace PrestadorServico.Domain.Commands
     public string Titulo { get; set; }
     public string Descricao { get; set; }
 
+    public CreateServicoCommand() { }
+
     public CreateServicoCommand(string usuario, string titulo, string descricao)
     {
       Usuario = usuario;
