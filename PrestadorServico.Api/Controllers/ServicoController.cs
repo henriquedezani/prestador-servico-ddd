@@ -21,7 +21,7 @@ namespace PrestadorServico.Api.Controllers
 
     [HttpPost]
     [Route("")]
-    public void Post([FromBody]CreateServicoCommand cmd, [FromServices]ServicoHandler handler)
+    public void Post(CreateServicoCommand cmd, [FromServices]ServicoHandler handler)
     {
        handler.Handle(cmd);
     }

@@ -30,8 +30,10 @@ namespace PrestadorServico.Api
         {
             services.AddControllers();
 
-            string strConn = Configuration.GetConnectionString("BDServico");
-            services.AddDbContext<DataContext>(options => options.UseSqlServer(strConn));
+            string strConn = Configuration.GetConnectionString("BDServico"); 
+            // services.AddDbContext<DataContext>(options => options.UseSqlServer(strConn));
+
+            services.AddDbContext<DataContext>(options => options.UseInMemoryDatabase("BDServicos"));
 
             services.AddTransient<IServicoRepository, ServicoRepository>();
             services.AddTransient<ServicoHandler, ServicoHandler>();
