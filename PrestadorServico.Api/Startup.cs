@@ -49,6 +49,11 @@ namespace PrestadorServico.Api
 
             app.UseRouting();
 
+            app.UseCors( option =>
+                option.AllowAnyHeader()
+                        .AllowAnyMethod()
+                        .AllowAnyOrigin());
+
             app.UseEndpoints(endpoints => endpoints.MapControllers());
         }
     }

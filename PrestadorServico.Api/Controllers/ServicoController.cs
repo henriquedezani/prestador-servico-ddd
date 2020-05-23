@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using PrestadorServico.Domain.Commands;
 using PrestadorServico.Domain.Entities;
@@ -21,9 +22,9 @@ namespace PrestadorServico.Api.Controllers
 
     [HttpPost]
     [Route("")]
-    public void Post(CreateServicoCommand cmd, [FromServices]ServicoHandler handler)
+    public ActionResult Post(CreateServicoCommand cmd, [FromServices]ServicoHandler handler)
     {
-       handler.Handle(cmd);
+       return Ok(handler.Handle(cmd));       
     }
   }
 }
